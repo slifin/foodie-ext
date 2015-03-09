@@ -1,0 +1,4 @@
+.recipe-label{position:absolute;text-align:right;width:200px;padding:0.5rem;display:block; box-sizing:border-box;background:rgba(255,255,255,0.5);color:#000;bottom:0;cursor:pointer;}
+.recipe-title{font-size:1.2rem; display:block;cursor:pointer;}
+#results a{position:relative;display:inline-block;}
+body{min-width:600px;text-align:center}
