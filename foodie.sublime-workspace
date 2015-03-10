@@ -1,0 +1,861 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"file",
+				"file_extension"
+			],
+			[
+				"recipe",
+				"recipe_id"
+			],
+			[
+				"reci",
+				"recipe_id"
+			],
+			[
+				"sear",
+				"searchIds"
+			],
+			[
+				"json",
+				"json_decode"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"Heart",
+				"HearthStoneLogger"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"getEle",
+				"getElementById(${0:id})	Element"
+			],
+			[
+				"setTim",
+				"setTimeout(${0:func}, delay)	Window"
+			],
+			[
+				"d",
+				"d"
+			],
+			[
+				"look",
+				"lookupY"
+			],
+			[
+				"change",
+				"change"
+			],
+			[
+				"update",
+				"updateState"
+			],
+			[
+				"left",
+				"leftClick"
+			],
+			[
+				"get",
+				"getCoords"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "controllers/popup.js",
+			"settings":
+			{
+				"buffer_size": 219,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/trolley.js",
+			"settings":
+			{
+				"buffer_size": 191,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/es6-build.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Vintageous/Vintageous.sublime-build",
+					""
+				],
+				[
+					"Packages/Vintageous/Vintageous.sublime-build",
+					"Vintageous - Test (All)"
+				],
+				[
+					"Packages/Vintageous/Vintageous.sublime-build",
+					"Vintageous - Test (This File Only)"
+				],
+				[
+					"Packages/es6-build.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/es6-build.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "packaget instal",
+		"selected_items":
+		[
+			[
+				"packaget instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git cur",
+				"Git: Show Current File"
+			],
+			[
+				"package insta",
+				"Package Control: Install Package"
+			],
+			[
+				"packaget insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"package instal",
+				"Package Control: Install Package"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git push",
+				"Git: Push Current Branch"
+			],
+			[
+				"git new",
+				"Git: New Branch"
+			],
+			[
+				"git change",
+				"Git: Change Branch"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git ",
+				"Git: Graph Current File"
+			],
+			[
+				"git a",
+				"Git: Amend Commit"
+			],
+			[
+				"package inst",
+				"Package Control: Install Package"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"packaget inst",
+				"Package Control: Install Package"
+			],
+			[
+				"gitcom",
+				"Git: Commit"
+			],
+			[
+				"git push ",
+				"Git: Push Current Branch"
+			],
+			[
+				"git add ",
+				"Git: Add..."
+			],
+			[
+				"git pull",
+				"Git: Pull Current Branch"
+			],
+			[
+				"git re",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"set",
+				"Set Syntax: HTML"
+			],
+			[
+				"gitpul",
+				"Git: Pull Current Branch"
+			],
+			[
+				"git new ",
+				"Git: New Branch"
+			],
+			[
+				"gitpush",
+				"Git: Push Current Branch"
+			],
+			[
+				"gitc",
+				"Git: Commit"
+			],
+			[
+				"set htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"WEB INS",
+				"Web Inspector"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"web inspe",
+				"Web Inspector"
+			],
+			[
+				"packaget remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"packaget install ",
+				"Package Control: Install Package"
+			],
+			[
+				"PACKAGET INST",
+				"Package Control: Install Package"
+			],
+			[
+				"package remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"PACKAGE LIST",
+				"Package Control: List Packages"
+			],
+			[
+				"instalp",
+				"Package Control: Install Package"
+			],
+			[
+				"remove p",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"vintagous",
+				"Vintageous: Open .vintageousrc"
+			],
+			[
+				"vintage",
+				"Vintageous: Toggle Vim Ctrl Keys"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 205.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/slifin/Desktop/Asda Cart Extracter",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/controllers",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/models",
+		"/C/Wnmp/html/foodie/config",
+		"/C/Wnmp/html/foodie/controllers",
+		"/C/Wnmp/html/foodie/models"
+	],
+	"file_history":
+	[
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/html/popup.html",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/models/trolley.js",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/models/recipe.js",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/manifest.json",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/events/bg.js",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/recipe.js",
+		"/C/Users/slifin/AppData/Roaming/Sublime Text 3/Packages/es6-build.sublime-build",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/popup.min.js",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/popup.js",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/bg.js",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/popup.html",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/bundle.js",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/recipe.min.js",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/Recipe.min.js",
+		"/C/Users/slifin/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/slifin/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Wnmp/html/foodie/models/foodity.php",
+		"/C/Users/slifin/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/.jshintrc",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/popup.css",
+		"/C/Wnmp/html/foodie/controllers/search.php",
+		"/C/Wnmp/html/foodie/config/routes.ini",
+		"/C/Wnmp/html/foodie/models/foods.php",
+		"/C/Wnmp/html/foodie/models/recipes.php",
+		"/C/Wnmp/html/foodie/lib/db/cortex.php",
+		"/C/Wnmp/html/foodie/index.php",
+		"/C/Users/slifin/AppData/Local/Temp/7zOB496.tmp/GlazedBeta6FChanges.txt",
+		"/C/Wnmp/html/foodie/lib/base.php",
+		"/C/Users/slifin/.ssh/id_rsa",
+		"/C/Users/slifin/Desktop/Asda Cart Extracter/main.js",
+		"/C/Users/slifin/Downloads/adrian's key.ppk",
+		"/C/Users/slifin/Downloads/private.ppk",
+		"/C/Users/slifin/Desktop/gd/index.php",
+		"/C/Users/slifin/Desktop/gd/n_page.php",
+		"/C/Users/slifin/Desktop/gd/h_gfx.php",
+		"/C/Wnmp/conf/nginx.conf",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Wnmp/html/foodie/controllers/foodity.php",
+		"/C/Wnmp/html/foodie/models/bbc.php",
+		"/C/Wnmp/html/foodie/controllers/bbcGoodFood.php",
+		"/C/Wnmp/html/foodie/config/app.php",
+		"/C/Wnmp/html/foodie/lib/api/classView.html",
+		"/C/Wnmp/html/foodie/lib/api/functions_v.html",
+		"/C/Wnmp/html/foodie/lib/api/classPreview.html",
+		"/C/Wnmp/html/foodie/lib/api/classPrefab.html",
+		"/C/Wnmp/html/foodie/lib/web/pingback.php",
+		"/C/Wnmp/html/foodie/lib/template.php",
+		"/C/Wnmp/html/foodie/models/base.php",
+		"/C/Wnmp/html/foodie/controllers/BBCGoodFood.php",
+		"/C/Wnmp/html/foodie/lib/api/classWeb_1_1OpenID.html",
+		"/C/Wnmp/html/foodie/lib/changelog.txt",
+		"/C/Wnmp/php/php.ini",
+		"/C/Wnmp/html/foodie/simple_html_dom.php",
+		"/C/Wnmp/html/foodie/cfg/app.php",
+		"/C/Wnmp/html/foodie/lib/app.php",
+		"/C/Wnmp/html/foodie/recipes.php",
+		"/C/Wnmp/html/foodie/lib/db/sql/schema.php",
+		"/C/Users/slifin/Desktop/phaser-experiment/index.html",
+		"/C/Users/slifin/Desktop/Phaser Game/index.html",
+		"/C/Users/slifin/Desktop/Phaser Game/test.js",
+		"/C/Users/slifin/AppData/Local/Temp/Temp1_hellophaser.zip/index.html",
+		"/C/Users/slifin/Desktop/Phaser Game/package.json",
+		"/D/SteamLibrary/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg",
+		"/D/SteamLibrary/steamapps/common/Team Fortress 2/tf/cfg/config.cfg",
+		"/C/Users/slifin/Desktop/hearthstone-client-logger/main.js",
+		"/C/Users/slifin/Desktop/hearthstone-client-logger/index.html",
+		"/C/Users/slifin/Desktop/hearthstone-client-logger/test.js",
+		"/C/Program Files/Boot2Docker for Windows/start.sh",
+		"/D/SteamLibrary/SteamApps/common/Team Fortress 2/tf/cfg/autoexec.cfg",
+		"/D/SteamLibrary/SteamApps/common/Team Fortress 2/tf/cfg/config_default.cfg",
+		"/D/SteamLibrary/SteamApps/common/Team Fortress 2/tf/cfg/config.cfg",
+		"/C/Users/slifin/AppData/Local/Temp/Temp1_BUPDATER_V124.zip/BUPDATER_V124/BUPDATER.txt",
+		"/C/Users/slifin/Desktop/hearthstone-client-logger/hello/binding.gyp",
+		"/C/Users/slifin/Desktop/hearthstone-client-logger/binding.gyp",
+		"/C/Users/slifin/Desktop/hearthstone-client-logger/log.config",
+		"/C/Users/slifin/AppData/Local/Blizzard/Hearthstone/log.config",
+		"/C/Program Files (x86)/Hearthstone/Hearthstone_Data/output_log.txt",
+		"/C/Users/slifin/AppData/Local/Temp/Temp1_node-cpp-modules-master.zip/node-cpp-modules-master/01_bare_minimum/package.json",
+		"/C/Users/slifin/Desktop/hearthstone-client-logger/hello.cpp",
+		"/C/Users/slifin/Desktop/hearthstone-client-logger/package.json",
+		"/C/Users/slifin/Desktop/hearthstone-client-logger/liner.js",
+		"/C/Users/slifin/Desktop/Hearthstone Deck Tracker/Files/log.config",
+		"/C/Users/slifin/Desktop/output_log-coin-unstable-portal.txt",
+		"/C/Users/slifin/Downloads/AllSets.json",
+		"/C/Users/slifin/Desktop/output_log_mage_game.txt",
+		"/C/GangWars/Arma3_GangWars/arma3server_2015-01-10_11-33-41.rpt",
+		"/D/remix/gangwars/Arma3_GangWars/arma3server_2015-01-10_11-49-19.rpt",
+		"/C/Users/slifin/.ssh/id_rsa.pub",
+		"/C/Users/slifin/Desktop/hearthstone-client-logger/node-webkit/package.json",
+		"/C/GangWars/Tools/TrayControl/config.ini",
+		"/D/remix/Arma 3/Arma3_GangWars/basic.cfg",
+		"/C/Users/slifin/Desktop/node-webkit-v0.11.5-win-x64/index.html",
+		"/C/Users/slifin/AppData/Local/Temp/Temp1_TrayControl.zip/config.ini",
+		"/D/remix/gangwars/Arma3_GangWars/config.cfg",
+		"/C/Users/slifin/Desktop/node-webkit-v0.11.5-win-x64/package.json",
+		"/C/Users/slifin/Desktop/brain/node_modules/brain/test.js",
+		"/C/Users/slifin/Desktop/node-app/package.json",
+		"/C/Users/slifin/Desktop/node-app/index.html",
+		"/C/Users/slifin/Desktop/brain/node_modules/brain/stream-example.js",
+		"/C/Users/slifin/Desktop/Chrome/link.js",
+		"/C/Users/slifin/Desktop/Chrome/manifest.json",
+		"/C/Wnmp/php/test.php",
+		"/C/Users/slifin/Desktop/Chrome/background.html",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/flourish.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/unit.js",
+		"/C/Users/slifin/AppData/Local/Temp/Temp1_trees.zip/js/Tree.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/camera2D.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/index.html",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/lib/babylon.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/planet.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/calc.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/lib/wheel.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/game.js",
+		"/C/Users/slifin/Desktop/flourish-html/js/game.js",
+		"/C/Users/slifin/Desktop/verkeer-3d.js",
+		"/C/Users/slifin/Desktop/flourish-html/js/planet.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/collection.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/babylon.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/controller.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/css/style.css",
+		"/C/Users/slifin/AppData/Local/Temp/Temp1_sample (1).zip/index.html",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/babylon-stable.js",
+		"/C/Users/slifin/Desktop/flourish-bablyon/js/Tools/BuildOurOwnBabylonJS/BuildOurOwnBabylonJS/ourOwnBabylon.js",
+		"/C/Users/slifin/Desktop/flourish-html/js/calc.js",
+		"/C/Users/slifin/Desktop/flourish-html/index.html",
+		"/C/Users/slifin/AppData/Local/Temp/Temp1_sample.zip/index.html",
+		"/C/Users/slifin/Desktop/flourish-html/js/collection.js",
+		"/C/Wnmp/html/leo/leo.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\\\",
+			"\\",
+			"group",
+			"sticky-orange",
+			"Allow-Origin",
+			"Access-Control",
+			"Access-Control-Allow-Origin",
+			"matches",
+			"const",
+			"JSON",
+			"INT",
+			"alias",
+			"class view",
+			"view",
+			"View",
+			"recipe",
+			"allow_url_",
+			"root",
+			"John Smith",
+			"Elvis Smash",
+			"switch",
+			"'yummy'",
+			"monitorChanges",
+			"getConfigDir",
+			"171593",
+			"deck",
+			"Asset",
+			"HERO_08",
+			"HERO",
+			"zone=GRAVEYARD",
+			"OPPOSING GRAVEYARD",
+			"hero",
+			"FaceDownCard",
+			"HERO_08",
+			"cardid",
+			"deck",
+			"171593",
+			"DECK",
+			"TRANSITIONING",
+			"GRAVEYARD",
+			"EndCurrentTaskList",
+			"_change",
+			"change",
+			"setdo",
+			"set",
+			"setdono",
+			"231547542",
+			"overwriting",
+			"EX1_082",
+			"231547542",
+			"AddCard",
+			"231547542",
+			"m_chosenEntities",
+			"Unstable Portal",
+			"unstable portal",
+			"EX1_009",
+			"GVG_003",
+			"configFile",
+			"getLogDir",
+			"\\",
+			"C:\\GangWars",
+			"Remix",
+			"A3Server",
+			"0.3",
+			"0.4",
+			"Flourish.",
+			"scene",
+			"myScene",
+			"canvas",
+			"opacity",
+			"applyTexture",
+			"lightSphere2",
+			"getBetween",
+			"Between",
+			"engine",
+			"Engine",
+			"engine",
+			"cameraRotation",
+			"camera",
+			"Camera",
+			"camera",
+			"attach",
+			"hammer",
+			"startX",
+			"touchDragStart",
+			"cameraRotation",
+			"FreeCamera",
+			"Rotation",
+			"drag",
+			"camera",
+			"\n	",
+			"resizeWindow",
+			"ResizeWindow",
+			"resizeWindow",
+			"startX",
+			"mouseMove",
+			"MouseMove",
+			"mouseMove",
+			"mouseDown",
+			"deltaY",
+			"mouseScroll",
+			"addWheelListener",
+			"mouseScroll",
+			"MouseMove",
+			"mouseMove",
+			"camera",
+			"flourish",
+			"sphere",
+			"getCanvas",
+			"label",
+			"engine",
+			"Engine",
+			"engine",
+			"ctx",
+			"scene",
+			"create",
+			"Create",
+			"create",
+			"Loop",
+			"loop",
+			"initScene",
+			"initLight",
+			"initCamera",
+			"initCanvas",
+			"gameObjects",
+			"initLight",
+			"camera",
+			"initCanvas"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"]\n",
+			"rotation",
+			"title",
+			"js",
+			"gewggewgewgew"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "controllers/popup.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 219,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								215,
+								215
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": true,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_insert",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "models/trolley.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 191,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								157,
+								157
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": true,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_insert",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 221.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 124.0
+	},
+	"pinned_build_system": "Packages/es6-build.sublime-build",
+	"project": "foodie.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"reci",
+				"foodie\\models\\recipes.php"
+			],
+			[
+				"corte",
+				"foodie\\lib\\db\\cortex.php"
+			],
+			[
+				"searc",
+				"foodie\\controllers\\search.php"
+			],
+			[
+				"base.php",
+				"foodie\\lib\\base.php"
+			],
+			[
+				"route",
+				"foodie\\config\\routes.ini"
+			],
+			[
+				"cortex",
+				"foodie\\lib\\db\\cortex.php"
+			],
+			[
+				"cacl",
+				"js\\calc.js"
+			],
+			[
+				"game",
+				"client\\game.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 424.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"_vintageous_reset_during_init": true,
+		"vintage":
+		{
+			"_cmdline_cd": "C:\\Users\\slifin\\AppData\\Roaming\\Sublime Text 3\\Packages"
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 238.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,7 +1,7 @@
 var items = [];
 var scan = 0; 
 
-var scanTrolly = function(){
+var scanTrolley = function(){
 	items = [];
 	$('[item_id]').each(function(){
 		var $that = $(this);
@@ -13,19 +13,20 @@ var scanTrolly = function(){
 		};
 		items.push(obj);
 	});
-	chrome.storage.local.set({'trolly': items});
+	console.log('setting new trolley');
+	chrome.storage.local.set({'trolley': items});
 };
 $(document).arrive('[item_id]',function(){
 	if(scan) return;
-	scanTrolly();
+	scanTrolley();
 	scan++;
 });
 $(document).on('click','.addMainItemToTrolley,.addItemToTrolley,.quantityDecrease,.quantityIncrease',function(){
-	scanTrolly();
+	scanTrolley();
 	alert('rescanned');
 });
 
-scanTrolly();
+scanTrolley();
 
 
 //step 1 scrape bbcgoodfood for recipies 
