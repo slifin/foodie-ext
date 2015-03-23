@@ -1,109 +1,174 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-"use strict";
+url = 'http://arcanine.net/';
 
-var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { "default": obj }; };
 
-var recipeModule = _interopRequireWildcard(require("../models/recipe.min.js"));
+var trolley = require('../models/trolley.js').Trolley();
+var recipe = require('../models/recipe.js').Recipe();
+var food = require('../models/food.js').Food();
+var events = require('../events/recipe.js').RecipeEvents(); 
 
-var trolleyModule = _interopRequireWildcard(require("../models/trolley.min.js"));
-
-var trolley = new trolleyModule.Trolley();
-var recipe = new recipeModule.Recipe();
-
-trolley.getTrolleyItems(function (data) {
-	trolley.getSearchString(data, function (searchString) {
-		recipe.searchRecipes(searchString, recipe.renderRecipes);
-	});
+$(document).ready(function(){
+	events.registerPagination(recipe,trolley);
+	events.viewBasket(trolley);
+	events.viewRecipes(recipe,trolley);
+	events.viewIngredients(food);
+	recipe.searchRecipes(trolley, recipe.renderRecipes);
 });
 
 
-},{"../models/recipe.min.js":2,"../models/trolley.min.js":3}],2:[function(require,module,exports){
-"use strict";
-
-exports.Recipe = Recipe;
-
-function Recipe() {
+},{"../events/recipe.js":2,"../models/food.js":3,"../models/recipe.js":4,"../models/trolley.js":5}],2:[function(require,module,exports){
+exports.RecipeEvents = function(){
 	var that = {},
-	    data = [],
-	    offset = 0,
-	    searchRecipes = function searchRecipes(params, callback) {
-		$.getJSON("http://foodie/search/" + params + "/0", {}, callback);
+	registerPagination = function(recipe,trolley){
+		$('.next').click(function(){
+			recipe.next(trolley);
+		});
+		$('.prev').click(function(){
+			recipe.prev(trolley);
+		});
 	},
-	    renderRecipes = function renderRecipes(json) {
-		var res = $("#results");
-		json.forEach(function (elem) {
-			res.append("<a target=\"_blank\" href=\"http://bbcgoodfood.com" + elem[0] + "\"><label class=\"recipe-label\"><span class=\"recipe-title\">" + elem[4] + "</span>" + elem[3] + " items of " + elem[2] + "</label><img style=\"width:200px\" src=\"" + elem[1] + "\"/></a>");
+	viewBasket = function(trolley){
+		$('.basket').click(function(){
+			trolley.getTrolleyItems(function(items){
+				trolley.renderTrolleyItems(items);
+			});
+		});
+	},
+	viewRecipes = function(recipe,trolley){
+		$('.recipes').click(function(){
+			recipe.searchRecipes(trolley, recipe.renderRecipes);
+		});
+	},
+	viewIngredients = function(food){
+		$('.ingredients').click(function(){
+			food.getIngredientsPage(food.renderIngredientsPage,100);
 		});
 	};
-	that.searchRecipes = searchRecipes;
+	that.viewIngredients = viewIngredients;
+	that.registerPagination = registerPagination; 
+	that.viewRecipes = viewRecipes;
+	that.viewBasket = viewBasket;
+	return that;
+};
+},{}],3:[function(require,module,exports){
+exports.Food = function(){
+	var that = {},
+	getIngredientsPage = function(callback,limit){
+		limit = limit || 100;
+		$.getJSON(url+"foodie/ingredients",{limit:limit},callback);
+	},
+	renderIngredientsPage = function(json){
+		if (!json) return;
+		$('#results').html('');
+		json.forEach(function(row){
+			$('#results').append('<div>'+row.title+'</div>');	
+		});
+	}
+	;
+	that.renderIngredientsPage = renderIngredientsPage;
+	that.getIngredientsPage = getIngredientsPage;
+	return that;
+};
+},{}],4:[function(require,module,exports){
+exports.Recipe = function(){
+	var that = {},
+	data = [],
+	offset = 0;
+	(function constructor(){
+		that.offset = offset;
+	})();
+	var searchRecipes = function(trolley,callback){
+		if (that.offset<0){
+			that.offset = 0;
+			return;
+		}
+		// var url = 'http://foodie/';
+		var url = 'http://arcanine.net/';
+		$('#results').html('<div class="loader"></div>').removeClass().addClass('loading-page');
+		trolley.getTrolleyItems(function(data){
+			trolley.getSearchString(data,function(searchString){
+				$.post(url+"foodie/search",{offset:that.offset,search:searchString},callback,'json').fail(function(){
+					toastr.warning('Connection to recipe engine failed');
+				});
+
+			});
+		});
+	},
+	renderRecipes = function(json){
+		if (!json){
+			$('#results').html('no results');
+			return;
+		}
+		$('#results').remove();
+		$('.side-trolley').after('<div id="results"></div>');
+		$('#results').data('context','recipes');
+		var pagination = json.shift();
+		console.log(pagination);
+		json.forEach(function(elem){
+			$('#results').append('<a class="label-parent" target="_blank" href="http://bbcgoodfood.com'+elem[0]+'"><label class="recipe-label"><span class="recipe-title">'+elem[4]+'</span>'+elem[3]+' ingredients of '+elem[2]+'</label><img style="width:200px" src="'+elem[1]+'"/></a>');
+		});
+		if (pagination.offset !== undefined)
+			$('.pagination-container').html('page '+parseInt(++pagination.offset)+' of '+pagination.pagesTotal);
+
+	},
+	next = function(trolley){
+		console.log('next triggered');
+		that.offset++;
+		that.searchRecipes(trolley,function(json){
+			that.renderRecipes(json);
+		});
+	},
+	prev = function(trolley){
+		console.log('prev triggered');
+		that.offset--; 
+		that.searchRecipes(trolley,function(json){
+			that.renderRecipes(json);
+		});
+	};
+	that.prev = prev;
+	that.next = next;
+	that.searchRecipes = searchRecipes; 
 	that.renderRecipes = renderRecipes;
 	return that;
-}
+};
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-
-},{}],3:[function(require,module,exports){
-"use strict";
-
-exports.Trolley = Trolley;
-
-function Trolley() {
+},{}],5:[function(require,module,exports){
+exports.Trolley = function(){
 	var that = {},
-	    itemIds = [],
-	    getTrolleyItems = function getTrolleyItems(callback) {
-		chrome.storage.local.get("trolley", callback);
+	itemIds = [],
+	updateTrolleyCounter = function(data){
+		if (data !== undefined)
+			$('.basket-count').text('('+data.length+')');
 	},
-	    splitImageName = function splitImageName(data) {
-		var imagePieces = data.image.split("/");
-		var lastPiece = imagePieces[imagePieces.length - 1];
-		lastPiece = lastPiece.split(".")[0];
-		itemIds.push(lastPiece.split("_")[0]);
+	renderTrolleyItems = function(trolleyItems){
+		trolleyItems = trolleyItems.trolley;
+		$('#results').html('').data('context','basket');
+		if (!trolleyItems)return;
+		$.each(trolleyItems,function(k,item){
+			$('#results').append('<div class="basket-item"><a class="product-link" target="_blank" href="http://groceries.asda.com/asda-webstore/landing/home.shtml?cmpid=ahc-_-ghs-sna1-_-asdacom-dsk-_-hp#/product/'+item.id+'"><img class="basket-image" src="'+item.image+'" /><div class="basket-title">'+item.title+'</div></a></div>');
+		});
+		updateTrolleyCounter(trolleyItems);		
+
 	},
-	    getSearchString = function getSearchString(trolleyData, callback) {
+	getTrolleyItems = function(callback){
+		chrome.storage.local.get('trolley',callback); 
+	},
+	splitImageName = function(data){
+		if (!data.image) return;
+		var imagePieces = data.image.split('/');
+		var lastPiece = imagePieces[imagePieces.length-1];
+		lastPiece = lastPiece.split('.')[0];
+		itemIds.push(lastPiece.split('_')[0]);
+	},
+	getSearchString = function(trolleyData,callback){
+		updateTrolleyCounter(trolleyData.trolley);
 		trolleyData.trolley.forEach(splitImageName);
-		callback(itemIds.join("-"));
+		callback(itemIds.join('-'));
 	};
+	that.renderTrolleyItems = renderTrolleyItems;
 	that.getTrolleyItems = getTrolleyItems;
 	that.getSearchString = getSearchString;
-	return that;
-}
-
-//$(document).ready(function(){
-//	$('#find').click(function(e){
-//		e.preventDefault();
-//		chrome.storage.local.get('trolly',function(val){
-//			console.log('trolly has ',val);
-//			var query = '';
-//			var images = [];
-//			var imagePieces = [];
-//			var lastPiece= '';
-//			val.trolly.forEach(function(value){
-//				imagePieces = value.image.split('/');
-//
-//				lastPiece = imagePieces[imagePieces.length-1];
-//				lastPiece = lastPiece.split('.')[0];
-//				images.push(lastPiece.split('_')[0]);
-//			});
-//			$.getJSON('http://foodie/search/'+images.join('-')+'/0',{},function(json){
-//				console.log(json);
-//
-//				var res = $('#results');
-//				json.forEach(function(elem){
-//					res.append('<a target="_blank" href="http://bbcgoodfood.com'+elem[0]+'"><label class="recipe-label"><span class="recipe-title">'+elem[4]+'</span>'+elem[3]+' items of '+elem[2]+'</label><img style="width:200px" src="'+elem[1]+'"/></a>');
-//				});
-//			});
-//
-//		});
-//	return false;
-//});
-//});
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
+	return that;	
+};
 
 },{}]},{},[1]);

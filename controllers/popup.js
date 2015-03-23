@@ -1,12 +1,16 @@
-import * as recipeModule from "../models/recipe.min.js";
-import * as trolleyModule from "../models/trolley.min.js";
+url = 'http://arcanine.net/';
 
-var trolley = new trolleyModule.Trolley();
-var recipe = new recipeModule.Recipe(); 
 
-trolley.getTrolleyItems(function(data){
-	trolley.getSearchString(data,function(searchString){
-		recipe.searchRecipes(searchString,recipe.renderRecipes);
-	});
+var trolley = require('../models/trolley.js').Trolley();
+var recipe = require('../models/recipe.js').Recipe();
+var food = require('../models/food.js').Food();
+var events = require('../events/recipe.js').RecipeEvents(); 
+
+$(document).ready(function(){
+	events.registerPagination(recipe,trolley);
+	events.viewBasket(trolley);
+	events.viewRecipes(recipe,trolley);
+	events.viewIngredients(food);
+	recipe.searchRecipes(trolley, recipe.renderRecipes);
 });
 

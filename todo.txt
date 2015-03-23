@@ -1,0 +1,19 @@
+
+make an original browser extension icon -> done
+
+change backend request to post (I think get parameters are too long for some checks) -> done
+
+sort loading css to not be so buggy -> done
+
+have a page when no results are found 
+
+when the cover of images slides up it should expose something, maybe ingredients 
+
+the extension should save where you are in your results within storage
+
+display pagination information to the user 
+
+debounce trolley updating for better performance 
+
+create extension icon and screenshots
+
