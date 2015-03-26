@@ -40,7 +40,7 @@ exports.RecipeEvents = function(){
 		});
 	},
 	viewIngredients = function(food){
-		$('.ingredients').click(function(){
+		$(document).on('click','.ingredients',function(){
 			food.getIngredientsPage(food.renderIngredientsPage,100);
 		});
 	};
@@ -95,15 +95,15 @@ exports.Recipe = function(){
 		});
 	},
 	renderRecipes = function(json){
-		if (!json){
-			$('#results').html('no results');
+		if (json[0].count){
+			$('#results').html('no results, <span class="ingredients">click here</span> to see suggested ingredients');
 			return;
 		}
+		console.log(json);
 		$('#results').remove();
 		$('.side-trolley').after('<div id="results"></div>');
 		$('#results').data('context','recipes');
 		var pagination = json.shift();
-		console.log(pagination);
 		json.forEach(function(elem){
 			$('#results').append('<a class="label-parent" target="_blank" href="http://bbcgoodfood.com'+elem[0]+'"><label class="recipe-label"><span class="recipe-title">'+elem[4]+'</span>'+elem[3]+' ingredients of '+elem[2]+'</label><img style="width:200px" src="'+elem[1]+'"/></a>');
 		});

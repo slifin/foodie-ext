@@ -21,7 +21,7 @@ exports.RecipeEvents = function(){
 		});
 	},
 	viewIngredients = function(food){
-		$('.ingredients').click(function(){
+		$(document).on('click','.ingredients',function(){
 			food.getIngredientsPage(food.renderIngredientsPage,100);
 		});
 	};
