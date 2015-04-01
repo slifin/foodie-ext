@@ -1,11 +1,20 @@
 {
 	"folders":
 	[
-		{
-			"path": "."
+	{
+		"path": "."
 		},
 		{
 			"path": "C:\\Wnmp\\html\\foodie"
 		}
-	]
-}
+		],
+		"build_systems":
+		[
+		{
+			"name": "browserify",
+			"cmd": ["browserify","$project_path\\controllers\\popup.js","-o","$project_path\\bundle.js"],
+			"shell":true,
+			"selector": "source.js"
+		}
+		]
+	}
