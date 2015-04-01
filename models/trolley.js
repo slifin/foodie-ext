@@ -27,7 +27,8 @@ exports.Trolley = function(){
 	},
 	getSearchString = function(trolleyData,callback){
 		updateTrolleyCounter(trolleyData.trolley);
-		trolleyData.trolley.forEach(splitImageName);
+		if (trolleyData.trolley)
+			trolleyData.trolley.forEach(splitImageName);
 		callback(itemIds.join('-'));
 	};
 	that.renderTrolleyItems = renderTrolleyItems;

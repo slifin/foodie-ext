@@ -24,10 +24,9 @@ exports.Recipe = function(){
 	},
 	renderRecipes = function(json){
 		if (json[0].count){
-			$('#results').html('no results, <span class="ingredients">click here</span> to see suggested ingredients');
+			$('#results').html('<div class="no-results">No basket items found, <span class="click-here ingredients">click here</span> to see the most popular ingredients</div>');
 			return;
 		}
-		console.log(json);
 		$('#results').remove();
 		$('.side-trolley').after('<div id="results"></div>');
 		$('#results').data('context','recipes');

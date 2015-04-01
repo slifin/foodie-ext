@@ -57,11 +57,16 @@ exports.Food = function(){
 		limit = limit || 100;
 		$.getJSON(url+"foodie/ingredients",{limit:limit},callback);
 	},
+	getAsdaURL = function(product_id){
+		if (product_id)
+			return 'http://groceries.asda.com/asda-webstore/landing/home.shtml?cmpid=ahc-_-ghs-sna1-_-asdacom-dsk-_-hp#/product/'+product_id;
+	},
 	renderIngredientsPage = function(json){
 		if (!json) return;
 		$('#results').html('');
 		json.forEach(function(row){
-			$('#results').append('<div>'+row.title+'</div>');	
+			console.log(row);
+			$('#results').append('<a target="_blank" class="ingredient-container" href="'+getAsdaURL(row.product_id)+'">'+row.title+'</a>');	
 		});
 	}
 	;
@@ -96,10 +101,9 @@ exports.Recipe = function(){
 	},
 	renderRecipes = function(json){
 		if (json[0].count){
-			$('#results').html('no results, <span class="ingredients">click here</span> to see suggested ingredients');
+			$('#results').html('<div class="no-results">No basket items found, <span class="click-here ingredients">click here</span> to see the most popular ingredients</div>');
 			return;
 		}
-		console.log(json);
 		$('#results').remove();
 		$('.side-trolley').after('<div id="results"></div>');
 		$('#results').data('context','recipes');
@@ -162,7 +166,8 @@ exports.Trolley = function(){
 	},
 	getSearchString = function(trolleyData,callback){
 		updateTrolleyCounter(trolleyData.trolley);
-		trolleyData.trolley.forEach(splitImageName);
+		if (trolleyData.trolley)
+			trolleyData.trolley.forEach(splitImageName);
 		callback(itemIds.join('-'));
 	};
 	that.renderTrolleyItems = renderTrolleyItems;

@@ -1,7 +1,7 @@
 .recipe-label{position:absolute;text-align:right;width:200px;padding:0;display:block; box-sizing:border-box;background:rgba(255,255,255,0.666);color:#000;bottom:0;cursor:pointer;min-height:auto;transition:all 0.3s ease-out;padding:0.5rem;}
 .recipe-title{font-size:1.2rem; display:block;cursor:pointer;}
 #results{display: inline-block; text-align: center;  overflow: auto;margin-left:200px;width:600px;position:absolute;height:100%;}
-.label-parent:hover > .recipe-label{min-height:100%; background:rgba(255,255,255,0.9);color:#000;}
+.label-parent:hover > .recipe-label{ background:rgba(255,255,255,0.9);color:#000;}
 #results .label-parent{position:relative;display:inline-block;width:200px;}
 body{min-width:800px;text-align:center;position: relative;margin:0;}
 *{ -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;}
@@ -28,3 +28,5 @@ nav:after{content: ''; display: inline-block; width: 100%; height: 0; font-size:
 .product-link{color:#000;}
 #results.loading-page{overflow:hidden;}
 .icon-offset{padding-right:1rem;}
+.no-results{font-size:1.6rem;  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.click-here{color:#78be20; font-weight:bold; cursor:pointer;}

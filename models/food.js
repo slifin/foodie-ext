@@ -4,11 +4,16 @@ exports.Food = function(){
 		limit = limit || 100;
 		$.getJSON(url+"foodie/ingredients",{limit:limit},callback);
 	},
+	getAsdaURL = function(product_id){
+		if (product_id)
+			return 'http://groceries.asda.com/asda-webstore/landing/home.shtml?cmpid=ahc-_-ghs-sna1-_-asdacom-dsk-_-hp#/product/'+product_id;
+	},
 	renderIngredientsPage = function(json){
 		if (!json) return;
 		$('#results').html('');
 		json.forEach(function(row){
-			$('#results').append('<div>'+row.title+'</div>');	
+			console.log(row);
+			$('#results').append('<a target="_blank" class="ingredient-container" href="'+getAsdaURL(row.product_id)+'">'+row.title+'</a>');	
 		});
 	}
 	;
