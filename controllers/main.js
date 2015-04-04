@@ -2,6 +2,11 @@ var items = [];
 var scan = 0; 
 $('a').removeAttr('onclick');
 var scanTrolley = function(){
+	console.log('test');
+	var oldItems = [];
+	if (items.length){
+		oldItems = items;
+	}
 	items = [];
 	item_id_dom = $('[item_id]');
 	if (item_id_dom.length === 0) return;
@@ -15,22 +20,15 @@ var scanTrolley = function(){
 		};
 		items.push(obj);
 	});
-	chrome.storage.local.set({'trolley': items});
+	if (oldItems.length != items.length){
+		chrome.storage.local.set({'trolley': items});
+	}
 };
-$(document).arrive('[item_id]', {fireOnAttributesModification: true},function(){
-	// if(scan) return;
-	 _.debounce(scanTrolley, 500, true);
-	// scan++;
-});
-$(document).leave('[item_id]',function(){
-	_.debounce(scanTrolley,500,true);
-	scanTrolley();
-});
+var gogo = _.debounce(scanTrolley, 1000);
+$(document).arrive('[item_id]', {fireOnAttributesModification: true},gogo);
+$(document).leave('[item_id]',gogo());
 $(document).arrive('a',function(elem){
 	$('a').unbind('click.foodie');
-	$('a').bind('click.foodie', function(){
-		scanTrolley();
-	});
-
+	$('a').bind('click.foodie', gogo());
 });
 // scanTrolley();
