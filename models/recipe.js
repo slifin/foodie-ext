@@ -23,7 +23,8 @@ exports.Recipe = function(){
 		});
 	},
 	renderRecipes = function(json){
-		if (json[0].count){
+		console.log(json);
+		if (!json[0].count){
 			$('#results').html('<div class="no-results">No basket items found, <span class="click-here ingredients">click here</span> to see the most popular ingredients</div>');
 			return;
 		}

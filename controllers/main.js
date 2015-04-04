@@ -3,8 +3,9 @@ var scan = 0;
 $('a').removeAttr('onclick');
 var scanTrolley = function(){
 	items = [];
-	if ($('[item_id]').length === 0) return;
-	$('[item_id]').each(function(){
+	item_id_dom = $('[item_id]');
+	if (item_id_dom.length === 0) return;
+	item_id_dom.each(function(){
 		var $that = $(this);
 		var obj = {
 			id: $that.attr('item_id'),
@@ -14,17 +15,15 @@ var scanTrolley = function(){
 		};
 		items.push(obj);
 	});
-	console.log('scanning trolley');
-	console.log(items);
-	
 	chrome.storage.local.set({'trolley': items});
 };
 $(document).arrive('[item_id]', {fireOnAttributesModification: true},function(){
 	// if(scan) return;
-	scanTrolley();
+	 _.debounce(scanTrolley, 500, true);
 	// scan++;
 });
 $(document).leave('[item_id]',function(){
+	_.debounce(scanTrolley,500,true);
 	scanTrolley();
 });
 $(document).arrive('a',function(elem){
