@@ -12,6 +12,7 @@ exports.Food = function(){
 		if (!json) return;
 		$('#results').html('');
 		json.forEach(function(row){
+			console.log(row);
 			$('#results').append('<a target="_blank" class="ingredient-container" href="'+getAsdaURL(row.product_id)+'"><img src="'+row.image+'" />'+row.title+'</a>');	
 		});
 	}

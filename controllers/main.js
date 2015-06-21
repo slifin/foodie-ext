@@ -20,15 +20,16 @@ var scanTrolley = function(){
 		};
 		items.push(obj);
 	});
+	console.log(items);
 	if (oldItems.length != items.length){
 		chrome.storage.local.set({'trolley': items});
 	}
 };
-var gogo = _.debounce(scanTrolley, 1000);
+var gogo = _.debounce(scanTrolley, 500);
 $(document).arrive('[item_id]', {fireOnAttributesModification: true},gogo);
-$(document).leave('[item_id]',gogo());
+$(document).leave('[item_id]',gogo);
 $(document).arrive('a',function(elem){
 	$('a').unbind('click.foodie');
-	$('a').bind('click.foodie', gogo());
+	$('a').bind('click.foodie', gogo);
 });
 // scanTrolley();

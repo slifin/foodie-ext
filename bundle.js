@@ -65,6 +65,7 @@ exports.Food = function(){
 		if (!json) return;
 		$('#results').html('');
 		json.forEach(function(row){
+			console.log(row);
 			$('#results').append('<a target="_blank" class="ingredient-container" href="'+getAsdaURL(row.product_id)+'"><img src="'+row.image+'" />'+row.title+'</a>');	
 		});
 	}
@@ -82,10 +83,12 @@ exports.Recipe = function(){
 		that.offset = offset;
 	})();
 	var searchRecipes = function(trolley,callback){
+		console.log('test');
 		if (that.offset<0){
 			that.offset = 0;
 			return;
 		}
+		console.log('search recipes');
 		// var url = 'http://foodie/';
 		var url = 'http://arcanine.net/';
 		$('#results').html('<div class="loader"></div>').removeClass().addClass('loading-page');
@@ -100,8 +103,11 @@ exports.Recipe = function(){
 	},
 	renderRecipes = function(json){
 		console.log(json);
-		if (!json[0].count){
-			$('#results').html('<div class="no-results">No basket items found, <span class="click-here ingredients">click here</span> to see the most popular ingredients</div>');
+
+		console.log('render recipes');
+		if (parseInt(json[0].count)===0||json.length===0){
+			console.log('trigger no basket');
+			$('#results').html('<div class="no-results">No recipes found, try adding more ingredients to your asda basket then try again.');
 			return;
 		}
 		$('#results').remove();
@@ -131,6 +137,7 @@ exports.Recipe = function(){
 	};
 	that.prev = prev;
 	that.next = next;
+	that.offset = offset;
 	that.searchRecipes = searchRecipes; 
 	that.renderRecipes = renderRecipes;
 	return that;
